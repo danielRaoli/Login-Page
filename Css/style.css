@@ -9,6 +9,8 @@ body{
     padding-left: 120px;
     overflow: hidden;
     height: 100vh;
+    gap: 3rem;
+    
 }
 
 .logo{
@@ -39,10 +41,11 @@ body{
 
 .description > a{
     color: #0C21C1;
+    cursor: pointer;
 }
 
 .container-login{
-    padding-top: 150px;
+    padding-top: 6rem;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -114,12 +117,14 @@ input::placeholder{
     font-family: "Poppins";
     border: 0;
     justify-content: center;
+    transition: 500ms;
 }
 
 .main-button:hover{
     background-color: #fff;
     color: #0C21C1;
     border: 1px solid #0C21C1;
+    transition: 500ms;
 }
 
 

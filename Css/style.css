@@ -1,14 +1,16 @@
 body{
     height: 100vh;
+    overflow: hidden;
 }
+
 .main{
     display: flex;
     font-family: "Poppins";
     padding-left: 120px;
-    justify-content: space-around;
-    overflow-y: hidden;
-    height: 100%;
+    overflow: hidden;
+    height: 100vh;
 }
+
 .logo{
     padding-top: 31px;
     padding-left: 120px;
@@ -41,10 +43,10 @@ body{
 
 .container-login{
     padding-top: 150px;
-    padding-right: 130px;
     display: flex;
     flex-direction: column;
-    width: 429px;
+    flex: 1;
+    max-width: 429px;
 }
 
 label{
@@ -55,10 +57,10 @@ label{
 
 .email{
     height: 30px;
-    width: 420px;
+    width: 100%;
     margin-bottom: 40px;
     border: 0;
-    border-bottom: 1px solid #0C21C1;
+    border-bottom: 3px solid #0C21C1;
 }
 
 input::placeholder{
@@ -70,9 +72,9 @@ input::placeholder{
 
 .form-input{
     height: 30px;
-    width: 420px;
+    max-width: 420px;
     border: 0;
-    border-bottom: 1px solid  #999;
+    border-bottom: 3px solid  #999;
 }
 
 .password{
@@ -111,6 +113,7 @@ input::placeholder{
     color: #e3e3e3;
     font-family: "Poppins";
     border: 0;
+    justify-content: center;
 }
 
 .main-button:hover{
@@ -123,6 +126,7 @@ input::placeholder{
 .links{
     text-align: center;
     text-decoration: none;
+    gap: 10px;
 }
 
 .links p{
@@ -131,19 +135,22 @@ input::placeholder{
 }
 
 .container-img{
+    padding-bottom: 100px;
     margin: 20px 0;
     margin-right: 20px;
+    max-height: 890px;
     display: flex;
     flex-direction: column;
-    width: 50vw;
     box-sizing: border-box;
     height: auto;
     background-color: #000842;
-    padding: 0 98px;
     color: #e3e3e3;
     border-radius: 15px;
     justify-content: center;
     text-align: start;
+    flex: 1;
+    box-sizing: border-box;
+    overflow: hidden;
 
 }
 
@@ -151,14 +158,34 @@ input::placeholder{
 .container-img .main-title{
     padding-top: 40px;
     padding-bottom: 20px;
+    padding-left:98px ;
 }
 
 .container-img p{
-    padding-bottom: 100px;
+    padding-left: 98px;
 }
 
 .container-img img {
     margin: auto;
     max-width: 521px;
     max-height: 521px;
+}
+
+@media screen and (max-width:980px) {
+    .main{
+        justify-content: center;
+        padding: 0;
+    }
+    
+    .container-img{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 700px){
+    .container-login{
+        flex: none;
+        width: 300px
+    }
 }

@@ -15,6 +15,7 @@ body{
 
 .main.-cadastro{
     justify-content: center;
+    padding: 1rem;
     
 }
 .main.-cadastro .second-title{
@@ -127,13 +128,14 @@ form > a {
 }   
 
 .cadastro {
-    min-width: 800px;
+    min-width: auto;
 }
 
 .form-email{
     display: flex;
     width: 100%;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .form-email input{
@@ -230,9 +232,20 @@ form > a {
 
 }
 
+@media  screen and (max-width: 750px) {
+    .form-email{
+        justify-content: center;
+       
+    }
+}
+
+
+
 @media screen and (max-width: 700px){
     .container-login{
         flex: none;
         width: 300px
     }
+
+
 }
